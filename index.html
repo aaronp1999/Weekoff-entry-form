@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Work Calendar</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+    <body class="min-h-screen bg-gray-200 p-2 sm:p-4 lg:p-6">
+
+    <div class="mx-auto w-full max-w-7xl overflow-hidden rounded-lg bg-white shadow-lg">
+
+        <header class="flex items-center justify-between border-b bg-gray-100 px-4 py-3 sm:px-6 sm:py-4">
+            <h1 class="text-lg font-semibold text-gray-800 sm:text-xl lg:text-2xl">
+                Add Work Calendar
+            </h1>
+
+            <button class="flex h-9 w-9 items-center justify-center rounded-md bg-gray-200 text-2xl text-gray-700 hover:bg-gray-300">
+                &times;
+            </button>
+        </header>
+
+        <main class="p-4 sm:p-6">
+
+            <section>
+                <h2 class="mb-3 text-base font-semibold text-gray-900 sm:text-lg">
+                    Define Weekend
+                </h2>
+
+                <label class="flex cursor-pointer items-start gap-3 sm:items-center">
+                    <input
+                        type="checkbox"
+                        id="halfDayCheckbox"
+                        class="mt-1 h-5 w-5 cursor-pointer accent-blue-600 sm:mt-0"
+                    >
+
+                    <span class="text-sm text-gray-700 sm:text-base">
+                        Half working day & half weekend
+                    </span>
+                </label>
+
+                <div id="halfDayDropdown" class="mt-4 hidden w-full sm:max-w-sm">
+                    <label for="session" class="mb-2 block text-sm font-medium text-gray-700">
+                        Select Working Session
+                    </label>
+
+                    <select
+                        id="session"
+                        class="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 sm:text-base"
+                    >
+                        <option value="">Select Session</option>
+                        <option value="first-half">First Half Working</option>
+                        <option value="second-half">Second Half Working</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="mt-6">
+                <div class="rounded-xl bg-gray-100 p-2 sm:p-4 lg:p-5">
+                    <div class="overflow-x-auto">
+
+                        <table class="w-full min-w-[760px] border-separate border-spacing-1 sm:border-spacing-2">
+
+                            <thead>
+                                <tr class="text-center text-sm text-gray-600 sm:text-base">
+                                    <th class="min-w-[160px]"></th>
+                                    <th class="min-w-[70px] py-2">All</th>
+                                    <th class="min-w-[100px] py-2">1st</th>
+                                    <th class="min-w-[100px] py-2">2nd</th>
+                                    <th class="min-w-[100px] py-2">3rd</th>
+                                    <th class="min-w-[100px] py-2">4th</th>
+                                    <th class="min-w-[100px] py-2">5th</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td class="day-box">Sunday</td>
+                                    <td class="check-box"><input type="checkbox" class="all-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="day-box">Monday</td>
+                                    <td class="check-box"><input type="checkbox" class="all-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="day-box">Tuesday</td>
+                                    <td class="check-box"><input type="checkbox" class="all-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="day-box">Wednesday</td>
+                                    <td class="check-box"><input type="checkbox" class="all-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="day-box">Thursday</td>
+                                    <td class="check-box"><input type="checkbox" class="all-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="day-box">Friday</td>
+                                    <td class="check-box"><input type="checkbox" class="all-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="day-box">Saturday</td>
+                                    <td class="check-box"><input type="checkbox" class="all-checkbox" checked></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox" checked></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox" checked></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox" checked></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox" checked></td>
+                                    <td class="check-box"><input type="checkbox" class="week-checkbox" checked></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="flex flex-col gap-3 border-t bg-gray-100 p-4 sm:flex-row sm:px-6">
+            <button
+                id="saveButton"
+                class="w-full rounded-md bg-blue-600 px-5 py-2.5 font-medium text-white hover:bg-blue-700 sm:w-auto"
+            >
+                Save
+            </button>
+
+            <button
+                id="cancelButton"
+                class="w-full rounded-md border border-gray-300 bg-white px-5 py-2.5 font-medium text-gray-700 hover:bg-gray-50 sm:w-auto"
+            >
+                Cancel
+            </button>
+        </footer>
+
+    </div>
+
+    <script>
+        const halfDayCheckbox = document.getElementById("halfDayCheckbox");
+        const halfDayDropdown = document.getElementById("halfDayDropdown");
+
+        halfDayCheckbox.addEventListener("change", function () {
+            if (halfDayCheckbox.checked) {
+                halfDayDropdown.classList.remove("hidden");
+            } else {
+                halfDayDropdown.classList.add("hidden");
+            }
+        });
+
+        const allCheckboxes = document.querySelectorAll(".all-checkbox");
+
+        allCheckboxes.forEach(function (allCheckbox) {
+            allCheckbox.addEventListener("change", function () {
+                const currentRow = allCheckbox.closest("tr");
+                const weekCheckboxes = currentRow.querySelectorAll(".week-checkbox");
+
+                weekCheckboxes.forEach(function (checkbox) {
+                    checkbox.checked = allCheckbox.checked;
+                });
+            });
+        });
+
+        document.getElementById("saveButton").addEventListener("click", function () {
+            alert("Work calendar saved successfully");
+        });
+
+        document.getElementById("cancelButton").addEventListener("click", function () {
+            location.reload();
+        });
+    </script>
+
+    <style>
+        .day-box {
+            min-width: 160px;
+            border-radius: 6px;
+            background-color: white;
+            padding: 14px 16px;
+            font-size: 15px;
+            font-weight: 500;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+        }
+
+        .check-box {
+            min-width: 70px;
+            border-radius: 6px;
+            background-color: white;
+            padding: 14px;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #2563eb;
+        }
+
+        @media screen and (max-width: 640px) {
+            .day-box {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .check-box {
+                padding: 12px;
+            }
+
+            input[type="checkbox"] {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    </style>
+
+</body>
+</html>
